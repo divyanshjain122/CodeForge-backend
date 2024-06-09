@@ -30,9 +30,9 @@ const MONGO_URI = process.env.MONGO_URI;
 // Use your MongoDB URI
 
 
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.log(err));
+mongoose.connect(MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 // Routes
 const FolderSchema = new mongoose.Schema({
